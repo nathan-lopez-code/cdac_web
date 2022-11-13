@@ -1,10 +1,10 @@
 from django.urls import path
-from . views import get_information
+from . views import InformationList
 
 
-app_name = "mobile_app"
+app_name = "api"
 
 
 urlpatterns = [
-    path("/get/all/information", get_information, name="getInformation"),
+    path("all/information", InformationList.as_view(), name="getInformation"),
 ]
